@@ -44,7 +44,7 @@ public class ReportService {
     }
 
     public List<Person> getPersonsByGroupAndCourse(String groupName, String courseName) {
-        List<Student> students = studentRepository.findByGroupAndCourses_Name(groupName, courseName);
+        List<Person> students = studentRepository.findByGroupAndCourses_Name(groupName, courseName);
         List<Teacher> teachers = teacherRepository.findByGroupAndCourses_Name(groupName, courseName);
         students.addAll(teachers);
         return students;

@@ -3,6 +3,8 @@ import com.example.task.Model.Teacher;
 import com.example.task.Repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -26,7 +28,7 @@ public class TeacherService {
         teacherRepository.save(teacher);
     }
 
-    public List<Teacher> findAllTeachers() {
+    public Collection<Object> findAllTeachers() {
         return teacherRepository.findAll();
     }
 
